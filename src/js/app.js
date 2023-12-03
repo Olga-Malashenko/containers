@@ -20,14 +20,12 @@ export default class Team {
   }
 }
 
-/* const team = new Team();
+const team = new Team();
 
-team.members.clear();
-console.log(team.members.size);
 
-team.addAll(['Ivan', 'Irina', 'Inna', 'Ivan']);
+/* team.addAll(['Ivan', 'Irina', 'Inna', 'Ivan']);
 console.log(team.members);
-console.log(' after many');
+console.log(' after many'); */
 
 let personage = "Ded Moroz";
 
@@ -44,6 +42,6 @@ console.log(team.members);
 let x = team.toArray();
 console.log(x);
 
-personage = 'Snegurochka';
+/* personage = 'Snegurochka';
 team.add(personage);
 console.log(team.members); */
