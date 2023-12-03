@@ -1,62 +1,36 @@
-// TODO: write your code here
-/*import sum from './basic';
+//let errorList = new Map();
 
-console.log('worked');
-
-console.log(sum([1, 2]));*/
-
-class Team {
-    constructor() {
-        this.members = new Set();
+class ErrorRepository {
+    constructor (code, description) {
+        /*this.code = code;
+        errorList.set (this, {
+            code,
+            description
+        });*/
+        this.list = new Map([
+            [1,'First error'],
+            [2, 'Second error'],
+            [3, 'Third error']
+        ]);
+        this.list.set(code, description);
     }
-    add(personage) {
-       if (this.members.has(personage)) {
-        console.log('Этот персонаж уже в команде');
-            throw new Error('Этот персонаж уже в команде');
+
+    translate(code) {
+        if(this.list.has(code)) {
+            return this.list.get(code);
         } else {
-            this.members.add(personage);
+            
+            return 'Unknown error';
         }
-    }
-    
-    addAll([...personages]) {
-        this.members.add(personages);
-    }
-    toArray() {
-        return Array.from(this.members);
+        
     }
 }
 
+const error = new ErrorRepository();
+console.log(error.list);
+console.log(error.translate(3));
+console.log(error.translate(33));
 
-
-const team = new Team();
-
-team.members.clear();
-console.log(team.members.size);
-
-team.addAll(['Ivan', 'Irina', 'Inna', 'Ivan']);
-console.log(team.members);
-console.log(' after many');
-
-let personage = "Ded Moroz";
-
-
-
-team.add(personage);
-console.log(team.members);
-
-personage = 'Snegurochka';
-team.add(personage);
-console.log(team.members);
-personage = 3;
-team.add(personage);
-console.log(team.members);
-
-let x = team.toArray();
-console.log(x);
-
-personage = 'Snegurochka';
-team.add(personage);
-console.log(team.members);
 
 
 
