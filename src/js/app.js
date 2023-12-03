@@ -11,8 +11,10 @@ export default class Team {
     }
   }
 
-  addAll([...personages]) { // ?
-    this.members.add(personages);
+  addAll(personages) {
+    [...personages].forEach((personage) => {
+      this.members.add(personage);
+    });
   }
 
   toArray() {
@@ -20,12 +22,10 @@ export default class Team {
   }
 }
 
-const team = new Team();
+/* const team = new Team();
 
-
-/* team.addAll(['Ivan', 'Irina', 'Inna', 'Ivan']);
+team.addAll(['Ivan', 'Irina', 'Inna', 'Ivan']);
 console.log(team.members);
-console.log(' after many'); */
 
 let personage = "Ded Moroz";
 
@@ -36,12 +36,5 @@ personage = 'Snegurochka';
 team.add(personage);
 console.log(team.members);
 personage = 3;
-team.add(personage);
-console.log(team.members);
-
-let x = team.toArray();
-console.log(x);
-
-/* personage = 'Snegurochka';
 team.add(personage);
 console.log(team.members); */
