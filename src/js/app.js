@@ -6,9 +6,8 @@ export default class Team {
   add(personage) {
     if (this.members.has(personage)) {
       throw new Error('Этот персонаж уже в команде');
-    } else {
-      this.members.add(personage);
     }
+    this.members.add(personage);
   }
 
   addAll(personages) {
@@ -22,12 +21,12 @@ export default class Team {
   }
 }
 
-/* const team = new Team();
+const team = new Team();
 
 team.addAll(['Ivan', 'Irina', 'Inna', 'Ivan']);
 console.log(team.members);
 
-let personage = "Ded Moroz";
+/* let personage = "Ded Moroz";
 
 team.add(personage);
 console.log(team.members);
