@@ -20,20 +20,3 @@ export default class Team {
     return Array.from(this.members);
   }
 }
-
-const team = new Team();
-
-team.addAll(['Ivan', 'Irina', 'Inna', 'Ivan']);
-console.log(team.members);
-
-/* let personage = "Ded Moroz";
-
-team.add(personage);
-console.log(team.members);
-
-personage = 'Snegurochka';
-team.add(personage);
-console.log(team.members);
-personage = 3;
-team.add(personage);
-console.log(team.members); */
